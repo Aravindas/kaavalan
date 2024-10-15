@@ -1,0 +1,182 @@
+<?php include('custheader.php'); ?>
+<?php include('datatbleplugins.php'); ?>
+
+<script src="js/actlaw.js"></script>
+
+<!-- section -->
+<br>
+<main>
+<div class="section margin-top_50">
+    
+<div class="full">
+    <div class="heading_main text_align_left p-2">
+        <h2><span class="title"><i class="fa fa-plus-circle" aria-hidden="true"></i> Act Law List</span>
+        <span class="btn btn-primary" style="float: right;" data-bs-toggle="modal" data-bs-target="#add_modal"><i class="fa fa-plus-circle " aria-hidden="true" ></i>&nbsp;Add New </span></h2>
+    </div>
+</div>
+
+<div class="tborder">
+        <div id="target"></div>
+    </div>
+</div>
+</main>
+<br>
+<?php include("footer.php"); ?>
+
+<div class="modal fade" id="add_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content med-modal">
+			<div class="modal-header">
+				<h3 class="modal-title" id="myModalLabel" align="left"><b>Add Act Law</b></h3>
+			</div>
+			<form id="actlawform"  name="actlawform" method="post">
+            <div class="modal-body">
+        		<div class="row">
+                <fieldset>
+                        <div class="cborder">
+                        <div class="row">
+                        <div class="col-md-6 form-group">
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Act</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Act" name="section_act" id="section_act" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Act Code</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Act Code" name="section_act_code" id="section_act_code" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Act Description</label>
+                            <textarea class="txt_box form-control" rows = "2" placeholder="Section Act Description" name="section_act_description" id="section_act_description"></textarea>
+                           </div>
+                         </div>
+                        <div class="col-md-6 form-group">
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Law</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Law" name="section_law" id="section_law" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Law Code</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Law Code" name="section_law_code" id="section_law_code" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Law Description</label>
+                            <textarea class="txt_box form-control" rows = "2" placeholder="Section Law Description" name="section_law_description" id="section_law_description"></textarea>
+                           </div>
+                         </div>
+                        <div class="col-md-6 form-group">
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Status</label>
+                            <div><input type="radio" id="active" name="status" value="1">
+                            <label for="active" style="color:#340e71">Active</label>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="inactive" name="status" value="0">
+                            <label for="inactive" style="color:#340e71">In active</label></div>
+                           </div>
+                         </div>
+
+                         </div>
+                         </div>
+                       </fieldset>
+                </div>   
+            </div>
+            <div class="modal-footer">
+               <div class="row">
+                   <div class="col-md-6"><button class="btn btn-success" type="submit" >Submit</button></div>
+                   <div class="col-md-6"><button class="btn btn-danger" type="button" data-bs-dismiss="modal" aria-label="Close">Cancel</button></div>
+               </div>
+          </div>
+        	</form>
+		</div>
+	</div>
+</div>
+ 
+<div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content med-modal">
+			<div class="modal-header">
+				<h3 class="modal-title" id="myModalLabel" align="left"><b>Update Act Law </b></h3>
+			</div>
+			<form id="actlawform_update"  name="actlawform_update" method="post">
+            <div class="modal-body">
+        		<div class="row">
+                <fieldset>
+                <input type="hidden"  name="h_id" id="h_id" />
+                        <div class="cborder">
+                        <div class="row">
+                        <div class="col-md-6 form-group">
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Act</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Act" name="u_section_act" id="u_section_act" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Act Code</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Act Code" name="u_section_act_code" id="u_section_act_code" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Act Description</label>
+                            <textarea class="txt_box form-control" rows = "2" placeholder="Section Act Description" name="u_section_act_description" id="u_section_act_description"></textarea>
+                           </div>
+                         </div>
+                        <div class="col-md-6 form-group">
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Law</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Law" name="u_section_law" id="u_section_law" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Law Code</label>
+                            <input type="text" class="txt_box form-control" placeholder=" Section Law Code" name="u_section_law_code" id="u_section_law_code" />
+                           </div>
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Section Law Description</label>
+                            <textarea class="txt_box form-control" rows = "2" placeholder="Section Law Description" name="u_section_law_description" id="u_section_law_description"></textarea>
+                           </div>
+                         </div>
+                        <div class="col-md-6 form-group">
+                           <div class="full field">
+                            <label><i class="fa fa-pencil" aria-hidden="true"></i> Status</label>
+                            <div><input type="radio" id="u_active" name="u_status" value="1">
+                            <label for="u_active" style="color:#340e71">Active</label>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="u_inactive" name="u_status" value="0">
+                            <label for="u_inactive" style="color:#340e71">In active</label></div>
+                           </div>
+                         </div>
+
+                         </div>
+                         </div>
+                       </fieldset>
+                </div>   
+            </div>
+            <div class="modal-footer">
+               <div class="row">
+                   <div class="col-md-6"><button class="btn btn-success" type="submit" >Submit</button></div>
+                   <div class="col-md-6"><button class="btn btn-danger" type="button" data-bs-dismiss="modal" aria-label="Close">Cancel</button></div>
+               </div>
+          </div>
+        	</form>
+		</div>
+	</div>
+</div>            
+
+
+<div class="modal fade" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog fontresize" role="document">
+		<div class="modal-content sm-modal">
+			<div class="modal-header">
+				<h3 class="modal-title" id="myModalLabel" align="left"><b>Delete Act Law</b></h3>
+			</div>
+			<form>
+        <div class="modal-body">
+          <div class="col-md-12">
+            <div class="form-group">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;<label for="comment">Confirm Your Deletion</label>
+              <input type='hidden' name='h_id2' id='h_id2'>		
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="icofont-close-circled" style="font-size:18px;" aria-hidden="true"></i>&nbsp;No</button>
+          <button type="button" class="btn btn-warning" onclick="DeleteDetails()"><i class="icofont-check-circled" style="font-size:18px;" aria-hidden="true"></i>&nbsp;Yes</button>
+        </div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,443 @@
+/*** Navigation Styling ***/
+.nav-bg-menu {
+    background: linear-gradient(41deg, #340e71, #069dd0);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+.nav-bg {
+    background: linear-gradient(341deg, #340c74, #04def6);
+    color: #c1a559;
+}
+.nav-bg i:hover {
+    color: #f5e7bf;
+}
+.title {
+    color: #340e71;
+    background: linear-gradient(41deg, #340e71, #e0480f
+    )
+    left
+    bottom
+        no-repeat
+    ,
+    url(http://lorempixel.com/800/100/abstract/2)
+    top
+    left
+    repeat;
+  background-size:100% 8px , 100% auto;
+  padding-bottom: 8px;
+  border-radius: 10px;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.navbar-nav .nav-link {
+    color: #fff;
+  }
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: rgb(249 170 2);
+}
+  .dropend .dropdown-toggle {
+    color: #e73e08;
+    margin-left: 1em;
+  }
+  .dropdown-item:hover {
+    background-color: lightsalmon;
+    color: #fff;
+  }
+  .dropdown .dropdown-menu {
+    display: none;
+  }
+  .dropdown:hover > .dropdown-menu,
+  .dropend:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+  }
+  @media screen and (min-width: 769px) {
+    .dropend:hover > .dropdown-menu {
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+    .dropend .dropdown-toggle {
+      margin-left: 0.5em;
+    }
+  }
+  @media (min-width: 992px){
+    .navbar-expand-lg .navbar-toggler {
+        display: block;
+    }
+  }
+  @media (min-width: 992px){
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+  }
+  .navbar-toggler {
+    background-color: #fff;
+  }
+/*** Navigation Styling END***/
+/*** Form Styling ***/
+label {
+    color: #9e6f08;
+    font-weight: 700;
+}
+
+.full {
+    padding: 10px;
+}
+ .form-group{
+    padding: 5px;
+ }
+.form-bg {
+    background: #f5f5eb;
+    border-radius: 25px;
+}
+.custom-file-uploader {
+    position: relative;
+}
+.custom-file-uploader input[type='file'] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: default;
+}
+.btn-default {
+    border: 1px solid #ccc;
+    background: #e7e5e5;
+}
+.fa-picture-o {
+    color: #340e71;
+}
+.fa-picture-o:hover {
+    color: #6109ee;
+}
+
+.fa-upload {
+    color: #340e71;
+}
+.fa-upload:hover {
+    color: #6109ee;
+}
+
+.fa-video-camera {
+    color: #340e71;
+}
+.fa-video-camera:hover {
+    color: #6109ee;
+}
+.cborder {
+    border: 2px solid #d14318;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 4px #d44415f0;
+    margin: 20px;
+}
+.tborder {
+    border: 2px solid #0cb9df;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px #1982bd;
+    margin: 20px;
+}
+/*** Form Styling END ***/
+
+/**** MODEL POPUP Styling Start ****/
+.modal-header {
+    background: #c9eff6;
+    color: #e83c08;
+}
+/**** Multi Document Upload - Start ****/
+#files-area {
+    width: 30%;
+    margin: 0 auto;
+}
+.file-block {
+    border-radius: 10px;
+    background-color: rgba(144, 163, 203, 0.2);
+    margin: 5px;
+    color: initial;
+    display: inline-flex;
+}
+.file-block > span.name {
+    padding-right: 10px;
+    width: max-content;
+    display: inline-flex;
+}
+.file-delete {
+    display: flex;
+    width: 24px;
+    color: initial;
+    background-color: #6eb4ff 0;
+    font-size: large;
+    justify-content: center;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.file-delete:hover {
+    background-color: rgba(144, 163, 203, 0.2);
+    border-radius: 10px;
+}
+.file-delete > span {
+    transform: rotate(45deg);
+}
+/**** Multi Document Upload - END ****/
+/**** Multi Image Upload Start ***/
+.upload__box {
+    padding: 40px;
+}
+.upload__inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.upload__btn {
+    display: inline-block;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    min-width: 116px;
+    padding: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid;
+    background-color: #4045ba;
+    border-color: #4045ba;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.upload__btn:hover {
+    background-color: unset;
+    color: #4045ba;
+    transition: all 0.3s ease;
+}
+.upload__btn-box {
+    margin-bottom: 10px;
+}
+.upload__img-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.upload__img-box {
+    width: 200px;
+    padding: 0 10px;
+    margin-bottom: 12px;
+}
+.upload__img-close {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    line-height: 24px;
+    z-index: 1;
+    cursor: pointer;
+}
+.upload__img-close:after {
+    content: '\2716';
+    font-size: 14px;
+    color: white;
+}
+.img-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 100%;
+}
+/**** Multi Image Upload END ***/
+.btn-action {
+    border: solid 4px #70a8f1;
+    background: #fbf6f5;
+    color: #0d6efd;
+}
+.btn-action:hover {
+    border: solid 4px #70a8f1;
+    background: #e6ebf4;
+    color: #0d6efd;
+}
+
+.btn-default1 {
+    border: 4px solid #9b9999;
+    background: #9b9999;
+}
+.btn-default1:hover {
+    border: 4px solid #9b9999;
+    background: #9b9999;
+}
+
+  @media only screen and (min-width: 1024px) {
+    .med-modal {
+      width:900px;
+      margin-left: -150px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .notify {
+        vertical-align: top;
+        position: absolute;
+        top: 14px;
+        background: white;
+        padding: 2px 8px;
+        border-radius: 47%;
+        margin-left: -14px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .notify {
+        vertical-align: top;
+        position: absolute;
+        top: 93px;
+        background: white;
+        padding: 0px 6px;
+        border-radius: 47%;
+        margin-left: -13px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .headtitle {
+        color: #fff;
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .headtitle {
+        color: #fff;
+        font-size: 20px;
+    }
+}
+
+.multi-select-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.multi-select-menu {
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    z-index: 1;
+    float: left;
+    min-width: 100%;
+    background: #fff;
+    margin: 1em 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.multi-select-menuitem {
+    display: block;
+    font-size: 0.875em;
+    padding: 0.6em 1em 0.6em 30px;
+    white-space: nowrap;
+}
+
+.multi-select-menuitem--titled:before {
+    display: block;
+    font-weight: bold;
+    content: attr(data-group-title);
+    margin: 0 0 0.25em -20px;
+}
+
+.multi-select-menuitem--titledsr:before {
+    display: block;
+    font-weight: bold;
+    content: attr(data-group-title);
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.multi-select-menuitem + .multi-select-menuitem {
+    padding-top: 0;
+}
+
+.multi-select-presets {
+    border-bottom: 1px solid #ddd;
+}
+
+.multi-select-menuitem input {
+    position: absolute;
+    margin-top: 0.25em;
+    margin-left: -20px;
+}
+
+.multi-select-button {
+    display: inline-block;
+    font-size: 0.875em;
+    padding: 0.2em 0.6em;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: -0.5em;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.multi-select-button:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.4em 0.4em 0 0.4em;
+    border-color: #999 transparent transparent transparent;
+    margin-left: 0.4em;
+    vertical-align: 0.1em;
+}
+
+.multi-select-container--open .multi-select-menu {
+    display: block;
+}
+
+.multi-select-container--open .multi-select-button:after {
+    border-width: 0 0.4em 0.4em 0.4em;
+    border-color: transparent transparent #999 transparent;
+}
+
+.multi-select-container--positioned .multi-select-menu {
+    /* Avoid border/padding on menu messing with JavaScript width calculation */
+    box-sizing: border-box;
+}
+
+.multi-select-container--positioned .multi-select-menu label {
+    /* Allow labels to line wrap when menu is artificially narrowed */
+    white-space: normal;
+}
