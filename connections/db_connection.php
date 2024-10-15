@@ -2,7 +2,7 @@
 
 	define("HOST", "localhost");
 	define("USER", "root");
-	define("PASS", "");
+	define("PASS", "new_password");
 	define("DATABASE", "kaavalan");
 	error_reporting(0);
 
